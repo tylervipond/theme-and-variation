@@ -1,0 +1,20 @@
+{
+  "name": "wasm",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "wasm-pack build --out-dir dist --out-name index"
+  },
+  "sideEffects": false,
+  "dependencies": {
+    "@rollup/plugin-node-resolve": "^8.4.0",
+    "rollup": "^2.23.0",
+    "rollup-plugin-copy": "^3.3.0",
+    "rollup-plugin-web-worker-loader": "^1.3.1"
+  },
+  "devDependencies": {
+    "@wasm-tool/rollup-plugin-rust": "^1.0.3"
+  }
+}
