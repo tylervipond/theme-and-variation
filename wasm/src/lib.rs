@@ -71,24 +71,6 @@ fn create_stutter_transition(mut new_frames: Vec<GifFrame>, mut old_frames: Vec<
 
 }
 
-// fn create_fade_transition(new_frames: Vec<GifFrame>, old_frames: Vec<GifFrame>) {
-
-//     old_frames
-//         .drain(..) 
-//         .zip(new_frames.drain(..))
-//         .enumerate()
-//         .map(|(i,t)| {
-            
-//         })
-//         .collect()
-// }
-
-// fn create_image_in_image_transition(new_frames: Vec<GifFrame>, old_frames: Vec<GifFrame>) {}
-
-// fn create_two_up_transition(new_frames: Vec<GifFrame>, old_frames: Vec<GifFrame>) {}
-
-// fn created_disintegration_transition(new_frames: Vec<GifFrame>, old_frames: Vec<GifFrame>) {}
-
 #[wasm_bindgen]
 pub fn process_gif(gif: &[u8]) {
     let mut frames = deinterlace_gif(gif);
