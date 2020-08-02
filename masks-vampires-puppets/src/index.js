@@ -1,7 +1,6 @@
 import { startGif, makeCanvasFullScreen } from './main';
 
-document.addEventListener('DOMContentLoaded', () => {
-  const canvas = document.getElementById('fumbler');
+function run(canvas) {
   makeCanvasFullScreen(canvas);
   startGif(canvas, [
     'masks/mask1.gif',
@@ -22,4 +21,15 @@ document.addEventListener('DOMContentLoaded', () => {
     'masks/vampire4.gif',
     'masks/vampire6.gif',
   ]);
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  const introWrapper = document.getElementById('intro-content');
+  const okButton = document.getElementById('ok-button');
+  const canvas = document.getElementById('fumbler');
+  okButton.addEventListener('click', () => {
+    introWrapper.style.display = 'none';
+    canvas.style.display = 'block';
+    run(canvas)
+  })
 });

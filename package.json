@@ -7,5 +7,10 @@
   "workspaces": [
     "masks-vampires-puppets",
     "wasm"
-  ]
+  ],
+  "scripts": {
+    "build:masks-vampires-puppets": "cd masks-vampires-puppets && npm run build",
+    "build:wasm": "cd wasm && npm run build",
+    "build": "npm run build:wasm && npm run build:masks-vampires-puppets"
+  }
 }
