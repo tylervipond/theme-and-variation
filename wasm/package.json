@@ -5,7 +5,7 @@
   "module": "dist/index.js",
   "license": "MIT",
   "scripts": {
-    "build": "wasm-pack build --out-dir dist --out-name index"
+    "build": "wasm-pack build --release --out-dir dist --out-name index"
   },
   "sideEffects": false,
   "dependencies": {

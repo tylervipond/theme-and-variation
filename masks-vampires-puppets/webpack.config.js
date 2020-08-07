@@ -1,3 +1,4 @@
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 const path = require('path');
 
@@ -11,7 +12,6 @@ const worker = {
     filename: "[name].js",
     globalObject: 'this'
   },
-  mode: "development",
   module: {
     rules: [
       {
@@ -28,9 +28,9 @@ const browser = {
     path: path.resolve(__dirname, "dist"),
     filename: "index.js",
   },
-  mode: "development",
   plugins: [
-    new CopyWebpackPlugin(['index.html', 'masks'])
+    new CleanWebpackPlugin(),
+    new CopyWebpackPlugin(['index.html', { from: 'masks', to: 'masks' }])
   ],
 };
 
