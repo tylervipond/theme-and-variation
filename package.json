@@ -6,6 +6,7 @@
   "private": true,
   "workspaces": [
     "masks-vampires-puppets",
+    "horses-quicksand-cartoons",
     "wasm"
   ],
   "scripts": {
