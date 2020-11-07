@@ -1,16 +1,16 @@
 {
-  "name": "gifgen",
+  "name": "theme-and-variation",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
   "private": true,
   "workspaces": [
-    "masks-vampires-puppets",
+    "app",
     "wasm"
   ],
   "scripts": {
-    "build:masks-vampires-puppets": "cd masks-vampires-puppets && npm run build",
+    "build:app": "cd app && npm run build",
     "build:wasm": "cd wasm && npm run build",
-    "build": "npm run build:wasm && npm run build:masks-vampires-puppets"
+    "build": "npm run build:wasm && npm run build:app"
   }
 }
