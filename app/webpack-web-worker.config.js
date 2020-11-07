@@ -1,5 +1,4 @@
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-const CopyWebpackPlugin = require("copy-webpack-plugin");
+/* eslint-disable no-undef */
 const path = require('path');
 
 module.exports = {

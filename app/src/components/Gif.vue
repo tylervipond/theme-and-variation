@@ -1,5 +1,9 @@
 <template>
-  <canvas :height="height" :width="width" ref="canvas"></canvas>
+  <canvas
+    ref="canvas"
+    :height="height"
+    :width="width"
+  />
 </template>
 <script>
 let frames = [];
@@ -21,7 +25,7 @@ function animate(canvas) {
   const newCanvas = document.createElement("canvas");
   const newContext = newCanvas.getContext("2d");
   let complete = false;
-  const endLoop = () => complete = true;
+  const endLoop = () => (complete = true);
   const loop = () => {
     if (frames.length > 0) {
       const canvasWidth = canvas.width;
@@ -57,7 +61,12 @@ function animate(canvas) {
 
 export default {
   props: {
-    urls: Array,
+    urls: {
+      type: Array,
+      default() {
+        return [];
+      }
+    }
   },
   data() {
     return {
@@ -71,7 +80,7 @@ export default {
     window.addEventListener("resize", this.updateSize, 250);
     this.worker = new Worker("populate-frames.js");
     this.worker.postMessage([...this.urls]);
-    this.worker.addEventListener("message", (e) => {
+    this.worker.addEventListener("message", e => {
       frames.push(e.data);
     });
     this.completeAnimationCallback = animate(this.$refs.canvas);
@@ -86,7 +95,7 @@ export default {
     updateSize() {
       this.height = window.innerHeight;
       this.width = window.innerWidth;
-    },
-  },
+    }
+  }
 };
 </script>

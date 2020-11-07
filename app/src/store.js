@@ -5,7 +5,7 @@ export const ACTIONS_STOP_VIDEO = "ACTIONS_STOP_VIDEO";
 export const ACTIONS_USER_INTERACT = "ACTIONS_USER_INTERACT";
 export const ACTIONS_USER_INTERACTION_HALT = "ACTIONS_USER_INTERACTION_HALT";
 export const GETTERS_PLAYING_VIDEO = "GETTERS_PLAYING_VIDEO";
-export const GETTERS_SHOW_HEADER = "GETTERS_SHOW_HEADER";
+export const GETTERS_SHOW_UI = "GETTERS_SHOW_UI";
 export const MUTATIONS_VIDEO_STARTED = "MUTATIONS_VIDEO_STARTED";
 export const MUTATIONS_VIDEO_STOPPED = "MUTATIONS_VIDEO_STOPPED";
 export const MUTATIONS_USER_INTERACTED = "MUTATIONS_USER_INTERACTED";
@@ -50,7 +50,7 @@ const getters = {
     [GETTERS_PLAYING_VIDEO](state) {
         return state.playingVideo
     },
-    [GETTERS_SHOW_HEADER](state) {
+    [GETTERS_SHOW_UI](state) {
         return !state.playingVideo || state.userInteracting;
     }
 }
