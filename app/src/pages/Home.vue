@@ -11,6 +11,11 @@
           Horses, Quicksand, Sleeping Cartoons
         </Link>
       </Typography>
+      <Typography as="li">
+        <Link as="router-link" to="/money-fumbles-trash">
+          Money, Fumbles, Trash
+        </Link>
+      </Typography>
     </FlatList>
   </nav>
 </template>
@@ -24,7 +29,7 @@ export default {
   components: {
     FlatList,
     Link,
-    Typography
-  }
+    Typography,
+  },
 };
 </script>
