@@ -16,6 +16,11 @@
           Money, Fumbles, Trash
         </Link>
       </Typography>
+      <Typography as="li">
+        <Link as="router-link" to="/television-dishes-lizards">
+          Money, Fumbles, Trash
+        </Link>
+      </Typography>
     </FlatList>
   </nav>
 </template>
